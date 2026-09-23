@@ -4,13 +4,13 @@ using TaskManagerApi.Api.Models;
 namespace TaskManagerApi.Api.DTOs;
 
 public record TaskCreateRequest(
-    [property: Required, MaxLength(200)] string Title,
+    [Required, MaxLength(200)] string Title,
     string? Description,
     DateTime? DueDate
 );
 
 public record TaskUpdateRequest(
-    [property: Required, MaxLength(200)] string Title,
+    [Required, MaxLength(200)] string Title,
     string? Description,
     TaskItemStatus Status,
     DateTime? DueDate
